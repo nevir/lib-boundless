@@ -1,0 +1,28 @@
+{
+  "name": "lib-boundless",
+  "version": "0.1.0",
+  "description": "Utilities and type definitions for Boundless",
+  "license": "MIT",
+  "author": "Ian MacLeod <ian@nevir.net>",
+  "main": "./dist/src/index.js",
+  "typings": "./dist/src/index.d.ts",
+  "repository": "https://github.com/nevir/lib-boundless",
+  "scripts": {
+    "compile": "./scripts/compile.sh",
+    "fix-style": "./scripts/fix-style.sh",
+    "test-style": "./scripts/test-style.sh"
+  },
+  "devDependencies": {
+    "@nevir/code-style": "^0.12.1",
+    "@types/jest": "^22.1.4",
+    "@types/node": "^8.9.4",
+    "eslint": "^4.18.0",
+    "eslint-plugin-eslint-comments": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-typescript": "^0.9.0",
+    "jest": "^22.4.2",
+    "prettier": "^1.11.0",
+    "typescript": "^2.7.0",
+    "typescript-eslint-parser": "^14.0.0"
+  }
+}

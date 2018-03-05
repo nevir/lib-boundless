@@ -1,0 +1,6 @@
+env:
+  jest: true
+  node: true
+
+rules:
+  import/no-extraneous-dependencies: [error, { devDependencies: true }]
