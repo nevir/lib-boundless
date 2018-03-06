@@ -13,7 +13,7 @@
     "test-style": "./scripts/test-style.sh"
   },
   "devDependencies": {
-    "@nevir/code-style": "^0.12.1",
+    "@nevir/code-style": "^0.13.0",
     "@types/jest": "^22.1.4",
     "@types/node": "^8.9.4",
     "eslint": "^4.18.0",
