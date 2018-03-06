@@ -4,3 +4,6 @@
 # artifacts
 *.js
 *.d.ts
+
+# special cases
+!/scripts/jest.js

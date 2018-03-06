@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/@nevir/code-style/typescript/config.json",
   "compilerOptions": {
-    "declaration": true
+    "declaration": true,
+    "inlineSourceMap": true
   }
 }

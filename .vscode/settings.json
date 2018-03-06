@@ -1,7 +1,7 @@
 {
   "files.exclude": {
-    "**/*.js": true,
-    "**/*.d.ts": true
+    "{src,test}/**/*.js": true,
+    "{src,test}/**/*.d.ts": true
   },
   "editor.formatOnSave": true,
   "editor.rulers": [80, 110],
@@ -18,5 +18,6 @@
       "language": "typescriptreact",
       "autoFix": true
     }
-  ]
+  ],
+  "jest.pathToJest": "./scripts/jest.js"
 }
