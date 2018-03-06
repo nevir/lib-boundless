@@ -16,9 +16,9 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@nevir/code-style@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/@nevir/code-style/-/code-style-0.13.0.tgz#c0c7fcd9924d3a95e12315a785becaf2e8993cd3"
+"@nevir/code-style@^0.14.0":
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/@nevir/code-style/-/code-style-0.14.0.tgz#66bd0097e7ae6c5bf08bd7e93023ac33756c4e74"
   dependencies:
     cpr "^3.0.1"
     lodash.isequal "^4.5.0"

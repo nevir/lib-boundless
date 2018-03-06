@@ -2,4 +2,5 @@
 /node_modules/
 
 # artifacts
-/dist/
+*.js
+*.d.ts
