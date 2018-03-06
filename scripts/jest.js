@@ -1,4 +1,23 @@
 #!/usr/bin/env node
+/**
+ * @fileoverview
+ * A wrapper around Jest that transforms all references to .js files with their
+ * primary .ts path.
+ *
+ * Why not ts-jest, you ask? Indeed! Well, so…
+ *
+ *   …ts-jest makes use of TypeScript's _incremental_ compilation API, which has
+ *    a number of inconsistencies with regular compilation passes:
+ *
+ *        * https://github.com/kulshekhar/ts-jest#known-limitations-for-hoisting
+ *        * https://github.com/kulshekhar/ts-jest/issues/281
+ *        * https://github.com/kulshekhar/ts-jest/pull/362 (pending)
+ *        * etc
+ *
+ *   …jest supports source maps in most places, which means fewer moving parts
+ *    to juggle. (except https://github.com/facebook/jest/issues/5730)
+ *
+ */
 const fs = require('fs');
 const path = require('path');
 const { Transform } = require('stream');
