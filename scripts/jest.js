@@ -15,8 +15,14 @@ const jsonTransformer = new Transform({
   transform(chunk, _encoding, callback) {
     const chunkData = chunk.toString();
     const redirectMatch = /Test results written to: (.+)/.exec(chunkData);
-    const data = redirectMatch ? JSON.parse(fs.readFileSync(redirectMatch[1])) : JSON.parse(chunkData);
 
+    let data;
+    try {
+      data = redirectMatch ? JSON.parse(fs.readFileSync(redirectMatch[1])) : JSON.parse(chunkData);
+    } catch (error) {
+      callback(null, chunkData);
+      return;
+    }
     const cleanData = transformChunkData(data);
 
     if (redirectMatch) {
@@ -47,6 +53,12 @@ let args = process.argv.slice(2).map(arg => {
 
 if (!args.includes('--color')) {
   args = ['--color', ...args];
+}
+
+// https://github.com/facebook/jest/issues/5730
+const watchIndex = args.indexOf('--watch');
+if (watchIndex >= 0) {
+  args[watchIndex] = '--watchAll';
 }
 
 const jestPath = path.resolve(__dirname, '..', 'node_modules', '.bin', 'jest');
